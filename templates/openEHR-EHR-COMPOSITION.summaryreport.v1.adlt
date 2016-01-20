@@ -48,7 +48,7 @@ The Sections component has been deliberately left unconstrained to maximise re-u
         ["organisation"] = <"Ocean Informatics">
         ["date"] = <"14/04/2010">
     >
-    other_contributors = <"Heath Frankel, Ocean Informatics, Australia", "Sam Heard, Ocean Informatics, Australia", "Sistine Barretto-Daniels, Ocean Informatics, Australia", "Hugh Leslie, Ocean Informatics, Australia", "Ian McNicoll, Ocean Informatics, Australia", "Bjørn Næss, DIPS ASA">
+    other_contributors = <"Heath Frankel, Ocean Informatics, Australia", "Sam Heard, Ocean Informatics, Australia", "Sistine Barretto-Daniels, Ocean Informatics, Australia", "Hugh Leslie, Ocean Informatics, Australia", "Ian McNicoll, Ocean Informatics, Australia", "BjÃ¸rn NÃ¦ss, DIPS ASA">
 
 definition
     COMPOSITION[id1.1] matches {    -- Report
@@ -67,7 +67,7 @@ terminology
         >
         ["sl"] = <
             ["id1.1"] = <
-                text = <"PoroÄ�ilo">
+                text = <"PoroÃ„ï¿½ilo">
                 description = <"*Document to communicate information to others, commonly in response to a request from another party.(en)">
             >
         >
@@ -146,7 +146,7 @@ terminology
                 description = <"*The average arterial pressure that occurs over the entire course of the heart contraction and relaxation cycle.   (en)">
             >
             ["id1008.1"] = <
-                text = <"è„‰åŽ‹">
+                text = <"Ã¨â€žâ€°Ã¥Å½â€¹">
                 description = <"*The variation in pressure over one contraction cycle(en)">
             >
         >
@@ -165,7 +165,7 @@ terminology
             >
             ["id1008.1"] = <
                 text = <"Pulsdruck">
-                description = <"Der Abstand zwischen dem systolischen und dem diastolischen Blutdruckwert. Beschreibt die Druckwelle, die mit jedem Herzschlag durch das BlutgefÃ¤ÃŸsystem lÃ¤uft.">
+                description = <"Der Abstand zwischen dem systolischen und dem diastolischen Blutdruckwert. Beschreibt die Druckwelle, die mit jedem Herzschlag durch das BlutgefÃƒÂ¤ÃƒÅ¸system lÃƒÂ¤uft.">
             >
         >
         ["en"] = <
@@ -200,8 +200,8 @@ terminology
                 description = <"*The average arterial pressure that occurs over the entire course of the heart contraction and relaxation cycle.   (en)">
             >
             ["id1008.1"] = <
-                text = <"è„ˆåœ§">
-                description = <"1å›žã�®å�Žç¸®ã‚µã‚¤ã‚¯ãƒ«ã�§ã�®è¡€åœ§ã�®å¤‰å‹•">
+                text = <"Ã¨â€žË†Ã¥Å“Â§">
+                description = <"1Ã¥â€ºÅ¾Ã£ï¿½Â®Ã¥ï¿½Å½Ã§Â¸Â®Ã£â€šÂµÃ£â€šÂ¤Ã£â€šÂ¯Ã£Æ’Â«Ã£ï¿½Â§Ã£ï¿½Â®Ã¨Â¡â‚¬Ã¥Å“Â§Ã£ï¿½Â®Ã¥Â¤â€°Ã¥â€¹â€¢">
             >
         >
         ["nl"] = <
@@ -214,7 +214,7 @@ terminology
                 description = <"Inschatting van de gemiddelde bloeddruk over een periode van 24 uur">
             >
             ["id1007.1"] = <
-                text = <"Gemiddelde arteriÃ«le druk">
+                text = <"Gemiddelde arteriÃƒÂ«le druk">
                 description = <"De gemiddelde bloeddruk gedurende 1 cyclus van samentrekken en ontspannen van het hart.">
             >
             ["id1008.1"] = <
