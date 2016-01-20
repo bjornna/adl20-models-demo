@@ -9,7 +9,9 @@ description
     details = <
         ["en"] = <
             language = <[ISO_639-1::en]>
-            purpose = <"">
+            misuse = <"">
+            purpose = <"Testing the ADL designer ">
+            use = <"Not a real Archetype. Only for testing the tool. ">
         >
     >
     lifecycle_state = <"unmanaged">
