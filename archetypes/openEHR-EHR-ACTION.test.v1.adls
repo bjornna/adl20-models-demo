@@ -1,0 +1,46 @@
+archetype (adl_version=2.0.4; rm_release=1.0.2)
+    openEHR-EHR-ACTION.test.v1.0.0
+
+language
+    original_language = <[ISO_639-1::en]>
+    
+description
+    copyright = <"">
+    details = <
+        ["en"] = <
+            language = <[ISO_639-1::en]>
+            purpose = <"">
+        >
+    >
+    lifecycle_state = <"unmanaged">
+
+definition
+    ACTION[id1] matches {    -- test
+        time
+        ism_transition matches {
+            ISM_TRANSITION[id2] occurrences matches {0..1} matches {    -- Planned
+                careflow_step matches {
+                    DV_CODED_TEXT[id3] occurrences matches {0..1}     -- Planned
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1"] = <
+                text = <"test">
+                description = <"test">
+            >
+            ["id2"] = <
+                text = <"Planned">
+                description = <"Planned">
+            >
+            ["id3"] = <
+                text = <"Planned">
+                description = <"Planned">
+            >
+        >
+    >
+
