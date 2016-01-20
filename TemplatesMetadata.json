@@ -1,0 +1,9 @@
+{
+  "templates" : [ {
+    "id" : "openEHR-EHR-COMPOSITION.summaryreport.v1.0.0",
+    "rmType" : "COMPOSITION",
+    "name" : "Report",
+    "path" : "templates/openEHR-EHR-COMPOSITION.summaryreport.v1.adlt",
+    "sha" : "d2540309bc247a4942fde807d000112e48891031"
+  } ]
+}
