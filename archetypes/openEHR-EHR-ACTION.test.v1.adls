@@ -22,6 +22,9 @@ definition
                 careflow_step matches {
                     DV_CODED_TEXT[id3] occurrences matches {0..1}     -- Planned
                 }
+                current_state matches {
+                    DV_CODED_TEXT[id4] occurrences matches {0..1}     -- planned
+                }
             }
         }
     }
@@ -40,6 +43,10 @@ terminology
             ["id3"] = <
                 text = <"Planned">
                 description = <"Planned">
+            >
+            ["id4"] = <
+                text = <"planned">
+                description = <"planned">
             >
         >
     >
