@@ -216,5 +216,12 @@
     "path" : "archetypes/openEHR-EHR-SECTION.medication.v1.adls",
     "sha" : "d379bcf36aa1293b122d305a3daa87b3647ada0f",
     "languages" : [ "en" ]
+  }, {
+    "id" : "openEHR-EHR-ACTION.test.v1.0.0",
+    "rmType" : "ACTION",
+    "name" : "test",
+    "path" : "archetypes/openEHR-EHR-ACTION.test.v1.adls",
+    "sha" : "263260b360b6d572e09c3c7c398d202e162a2190",
+    "languages" : [ "en" ]
   } ]
 }
