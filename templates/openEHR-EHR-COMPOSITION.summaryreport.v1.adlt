@@ -51,7 +51,11 @@ The Sections component has been deliberately left unconstrained to maximise re-u
     other_contributors = <"Heath Frankel, Ocean Informatics, Australia", "Sam Heard, Ocean Informatics, Australia", "Sistine Barretto-Daniels, Ocean Informatics, Australia", "Hugh Leslie, Ocean Informatics, Australia", "Ian McNicoll, Ocean Informatics, Australia", "Bjørn Næss, DIPS ASA">
 
 definition
-    COMPOSITION[id1.1]     -- Report
+    COMPOSITION[id1.1] matches {    -- Report
+        content matches {
+            use_archetype OBSERVATION[id0.2, openEHR-EHR-OBSERVATION.ovl-summaryreport-blood_pressure-001.v1.0.0]
+        }
+    }
 
 terminology
     term_definitions = <
@@ -65,6 +69,157 @@ terminology
             ["id1.1"] = <
                 text = <"PoroÄ�ilo">
                 description = <"*Document to communicate information to others, commonly in response to a request from another party.(en)">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-OBSERVATION.ovl-summaryreport-blood_pressure-001.v1.0.0
+
+specialize
+    openEHR-EHR-OBSERVATION.blood_pressure.v1.0.0
+
+definition
+    OBSERVATION[id1.1] matches {    -- *Blood Pressure(en)
+        /data[id2]/events matches {
+            EVENT[id7] matches {
+                /data[id4]/items matches {
+                    ELEMENT[id1007.1] occurrences matches {0} matches {    -- Srednja vrednost
+                        value matches {
+                            DV_QUANTITY[id1056.1] matches {
+                                property matches {[at1055]}
+                                magnitude matches {|0.0..<1000.0|}
+                                precision matches {|0|}
+                                units matches {"mm[Hg]"}
+                            }
+                        }
+                    }
+                    ELEMENT[id1008.1] occurrences matches {0} matches {    -- Pulzni tlak
+                        value matches {
+                            DV_QUANTITY[id1057.1] matches {
+                                property matches {[at1055]}
+                                magnitude matches {|0.0..<1000.0|}
+                                precision matches {|0|}
+                                units matches {"mm[Hg]"}
+                            }
+                        }
+                    }
+                }
+            }
+            INTERVAL_EVENT[id1043.1] occurrences matches {0}     -- *24 hour average (en)
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["sl"] = <
+            ["id1.1"] = <
+                text = <"*Blood Pressure(en)">
+                description = <"*The local measurement of arterial blood pressure which is a surrogate for arterial. pressure in the systemic circulation.  Most commonly, use of the term 'blood pressure' refers to measurement of brachial artery pressure in the upper arm.(en)">
+            >
+            ["id1043.1"] = <
+                text = <"*24 hour average (en)">
+                description = <"*Estimate of the average blood pressure over a 24 hour period.(en)">
+            >
+            ["id1007.1"] = <
+                text = <"Srednja vrednost">
+                description = <"*The average arterial pressure that occurs over the entire course of the heart contraction and relaxation cycle.(en)">
+            >
+            ["id1008.1"] = <
+                text = <"Pulzni tlak">
+                description = <"*The difference between the systolic and diastolic pressure.(en)">
+            >
+        >
+        ["zh-cn"] = <
+            ["id1.1"] = <
+                text = <"*Blood Pressure(en)">
+                description = <"*The local measurement of arterial blood pressure which is a surrogate for arterial. pressure in the systemic circulation.  Most commonly, use of the term 'blood pressure' refers to measurement of brachial artery pressure in the upper arm.(en)">
+            >
+            ["id1043.1"] = <
+                text = <"*24 hour average (en)">
+                description = <"*Estimate of the average blood pressure over a 24 hour period(en)">
+            >
+            ["id1007.1"] = <
+                text = <"*Mean Arterial Pressure(en)">
+                description = <"*The average arterial pressure that occurs over the entire course of the heart contraction and relaxation cycle.   (en)">
+            >
+            ["id1008.1"] = <
+                text = <"è„‰åŽ‹">
+                description = <"*The variation in pressure over one contraction cycle(en)">
+            >
+        >
+        ["de"] = <
+            ["id1.1"] = <
+                text = <"*Blood Pressure(en)">
+                description = <"*The local measurement of arterial blood pressure which is a surrogate for arterial. pressure in the systemic circulation.  Most commonly, use of the term 'blood pressure' refers to measurement of brachial artery pressure in the upper arm.(en)">
+            >
+            ["id1043.1"] = <
+                text = <"*24 hour average (en)">
+                description = <"*Estimate of the average blood pressure over a 24 hour period(en)">
+            >
+            ["id1007.1"] = <
+                text = <"*Mean Arterial Pressure(en)">
+                description = <"*The average arterial pressure that occurs over the entire course of the heart contraction and relaxation cycle.   (en)">
+            >
+            ["id1008.1"] = <
+                text = <"Pulsdruck">
+                description = <"Der Abstand zwischen dem systolischen und dem diastolischen Blutdruckwert. Beschreibt die Druckwelle, die mit jedem Herzschlag durch das BlutgefÃ¤ÃŸsystem lÃ¤uft.">
+            >
+        >
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Blood Pressure">
+                description = <"The local measurement of arterial blood pressure which is a surrogate for arterial. pressure in the systemic circulation.  Most commonly, use of the term 'blood pressure' refers to measurement of brachial artery pressure in the upper arm.">
+            >
+            ["id1043.1"] = <
+                text = <"24 hour average ">
+                description = <"Estimate of the average blood pressure over a 24 hour period.">
+            >
+            ["id1007.1"] = <
+                text = <"Mean Arterial Pressure">
+                description = <"The average arterial pressure that occurs over the entire course of the heart contraction and relaxation cycle.">
+            >
+            ["id1008.1"] = <
+                text = <"Pulse Pressure">
+                description = <"The difference between the systolic and diastolic pressure.">
+            >
+        >
+        ["ja"] = <
+            ["id1.1"] = <
+                text = <"*Blood Pressure(en)">
+                description = <"*The local measurement of arterial blood pressure which is a surrogate for arterial. pressure in the systemic circulation.  Most commonly, use of the term 'blood pressure' refers to measurement of brachial artery pressure in the upper arm.(en)">
+            >
+            ["id1043.1"] = <
+                text = <"*24 hour average (en)">
+                description = <"*Estimate of the average blood pressure over a 24 hour period(en)">
+            >
+            ["id1007.1"] = <
+                text = <"*Mean Arterial Pressure(en)">
+                description = <"*The average arterial pressure that occurs over the entire course of the heart contraction and relaxation cycle.   (en)">
+            >
+            ["id1008.1"] = <
+                text = <"è„ˆåœ§">
+                description = <"1å›žã�®å�Žç¸®ã‚µã‚¤ã‚¯ãƒ«ã�§ã�®è¡€åœ§ã�®å¤‰å‹•">
+            >
+        >
+        ["nl"] = <
+            ["id1.1"] = <
+                text = <"*Blood Pressure(en)">
+                description = <"*The local measurement of arterial blood pressure which is a surrogate for arterial. pressure in the systemic circulation.  Most commonly, use of the term 'blood pressure' refers to measurement of brachial artery pressure in the upper arm.(en)">
+            >
+            ["id1043.1"] = <
+                text = <"24 uur gemiddelde">
+                description = <"Inschatting van de gemiddelde bloeddruk over een periode van 24 uur">
+            >
+            ["id1007.1"] = <
+                text = <"Gemiddelde arteriÃ«le druk">
+                description = <"De gemiddelde bloeddruk gedurende 1 cyclus van samentrekken en ontspannen van het hart.">
+            >
+            ["id1008.1"] = <
+                text = <"Polsdruk">
+                description = <"Het verschil tussen de systolische en diastolische bloeddruk">
             >
         >
     >
