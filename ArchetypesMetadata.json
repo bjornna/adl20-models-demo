@@ -221,7 +221,7 @@
     "rmType" : "ACTION",
     "name" : "test",
     "path" : "archetypes/openEHR-EHR-ACTION.test.v1.adls",
-    "sha" : "263260b360b6d572e09c3c7c398d202e162a2190",
+    "sha" : "ba6eb71fd4e76cd23f81473e7468bd278633b4d3",
     "languages" : [ "en" ]
   } ]
 }
