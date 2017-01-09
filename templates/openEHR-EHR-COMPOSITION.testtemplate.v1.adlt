@@ -1,0 +1,121 @@
+template (adl_version=2.0.5; rm_release=1.0.2)
+    openEHR-EHR-COMPOSITION.testtemplate.v1.0.0
+
+specialize
+    openEHR-EHR-COMPOSITION.encounter.v1.0.0
+
+language
+    original_language = <[ISO_639-1::en]>
+    translations = <
+        ["sl"] = <
+            author = <
+                ["name"] = <"?">
+            >
+        >
+    >
+
+description
+    lifecycle_state = <"unmanaged">
+    original_author = <
+        ["date"] = <"2005-10-10">
+        ["name"] = <"Thomas Beale">
+        ["organisation"] = <"Ocean Informatics">
+    >
+    copyright = <"copyright (c) 2010 openEHR Foundation">
+    details = <
+        ["en"] = <
+            language = <[ISO_639-1::en]>
+            purpose = <"Record of encounter as a progress note.">
+            use = <"">
+            misuse = <"">
+            keywords = <"progress", "note", "encounter">
+        >
+        ["sl"] = <
+            language = <[ISO_639-1::sl]>
+            purpose = <"Record of encounter as a progress note.">
+            use = <"">
+            misuse = <"">
+            keywords = <"progress", "note", "encounter">
+        >
+    >
+
+definition
+    COMPOSITION[id1.1] matches {    -- Encounter
+        category matches {
+            DV_CODED_TEXT[id4.1] occurrences matches {0} 
+        }
+        content matches {
+            use_archetype EVALUATION[id0.3, openEHR-EHR-EVALUATION.ovl-testtemplate-plain_note-001.v1.0.0]
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Encounter">
+                description = <"Generic encounter or progress note composition">
+            >
+        >
+        ["sl"] = <
+            ["id1.1"] = <
+                text = <"Encounter">
+                description = <"Generic encounter or progress note composition">
+            >
+        >
+    >
+
+------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-EVALUATION.ovl-testtemplate-plain_note-001.v1.0.0
+
+specialize
+    openEHR-EHR-EVALUATION.plain_note.v1.0.0
+
+definition
+    EVALUATION[id1.1] matches {
+        /data[id2]/items matches {
+            ELEMENT[id5.1] matches {
+                value matches {
+                    DV_TEXT[id7.1] 
+                }
+            }
+            ELEMENT[id6.1] occurrences matches {0} matches {
+                value matches {
+                    DV_MULTIMEDIA[id8.1] 
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Plain note">
+                description = <"Simple note with resources">
+            >
+            ["id6.1"] = <
+                text = <"Resource">
+                description = <"*">
+            >
+            ["id5.1"] = <
+                text = <"Note">
+                description = <"*">
+            >
+        >
+        ["sl"] = <
+            ["id1.1"] = <
+                text = <"*Plain note(en)">
+                description = <"*Simple note with resources(en)">
+            >
+            ["id6.1"] = <
+                text = <"*Resource(en)">
+                description = <"**(en)">
+            >
+            ["id5.1"] = <
+                text = <"*Note(en)">
+                description = <"**(en)">
+            >
+        >
+    >
