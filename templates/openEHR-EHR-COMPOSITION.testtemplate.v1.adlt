@@ -127,11 +127,13 @@ specialize
     openEHR-EHR-EVALUATION.plain_note.v1.0.0
 
 definition
-    EVALUATION[id1.1] matches {    -- Plain note
+    EVALUATION[id1.1] matches {    -- Test
         /data[id2]/items matches {
             ELEMENT[id5.1] matches {    -- Note
                 value matches {
-                    DV_TEXT[id7.1] 
+                    DV_CODED_TEXT[id7.1] matches {
+                        defining_code matches {[ac0.1; at0.1]}
+                    }
                 }
             }
             ELEMENT[id6.1] occurrences matches {0} matches {    -- Resource
@@ -146,8 +148,9 @@ terminology
     term_definitions = <
         ["en"] = <
             ["id1.1"] = <
-                text = <"Plain note">
-                description = <"Simple note with resources">
+                text = <"Test">
+                description = <"Simple note test">
+                comment = <"Kommentatr">
             >
             ["id6.1"] = <
                 text = <"Resource">
@@ -156,6 +159,18 @@ terminology
             ["id5.1"] = <
                 text = <"Note">
                 description = <"*">
+            >
+            ["at0.1"] = <
+                text = <"Item 1">
+                description = <"Ja dette er item 1">
+            >
+            ["at0.2"] = <
+                text = <"Item 2">
+                description = <"Ja dette er Item 2">
+            >
+            ["ac0.1"] = <
+                text = <"ValueSetForNote">
+                description = <"Test">
             >
         >
         ["sl"] = <
@@ -170,6 +185,18 @@ terminology
             ["id5.1"] = <
                 text = <"*Note(en)">
                 description = <"**(en)">
+            >
+            ["at0.1"] = <
+                text = <"Item 1 (en)">
+                description = <"Ja dette er item 1 (en)">
+            >
+            ["at0.2"] = <
+                text = <"Item 2 (en)">
+                description = <"Ja dette er Item 2 (en)">
+            >
+            ["ac0.1"] = <
+                text = <"ValueSetForNote (en)">
+                description = <"Test (en)">
             >
         >
     >
