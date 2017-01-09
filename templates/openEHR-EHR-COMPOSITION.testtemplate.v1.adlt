@@ -7,7 +7,11 @@ specialize
 language
     original_language = <[ISO_639-1::en]>
     translations = <
-        ["nb"] = <>
+        ["nb"] = <
+            author = <
+                ["name"] = <"Bjørn Næss">
+            >
+        >
         ["sl"] = <
             author = <
                 ["name"] = <"?">
@@ -23,7 +27,6 @@ description
         ["organisation"] = <"Ocean Informatics">
     >
     copyright = <"copyright (c) 2010 openEHR Foundation">
-    other_contributors = <"Bjørn Næss", ...>
     details = <
         ["en"] = <
             language = <[ISO_639-1::en]>
@@ -41,9 +44,9 @@ description
         >
         ["nb"] = <
             language = <[ISO_639-1::nb]>
-            purpose = <"Test template ">
-            use = <"Kan brukes så fint som bare det">
-            misuse = <"Ikke bruk denne til annet enn den skal. ">
+            purpose = <"*Record of encounter as a progress note. (en)">
+            use = <"Test">
+            misuse = <"test">
             keywords = <"progress", "note", "encounter">
         >
     >
