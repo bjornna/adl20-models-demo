@@ -5,5 +5,11 @@
     "name" : "Report",
     "path" : "templates/openEHR-EHR-COMPOSITION.summaryreport.v1.adlt",
     "sha" : "1b18419fd6d664b5c22a4a90b20bda769c0672b4"
+  }, {
+    "id" : "openEHR-EHR-COMPOSITION.testtemplate.v1.0.0",
+    "rmType" : "COMPOSITION",
+    "name" : "Encounter",
+    "path" : "templates/openEHR-EHR-COMPOSITION.testtemplate.v1.adlt",
+    "sha" : "9612b1d47fdd201ef769c6fa1436d321de0a6a62"
   } ]
 }
