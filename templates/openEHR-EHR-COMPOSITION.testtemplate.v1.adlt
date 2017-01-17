@@ -7,11 +7,6 @@ specialize
 language
     original_language = <[ISO_639-1::en]>
     translations = <
-        ["nb"] = <
-            author = <
-                ["name"] = <"Bjørn Næss">
-            >
-        >
         ["sl"] = <
             author = <
                 ["name"] = <"?">
@@ -42,13 +37,6 @@ description
             misuse = <"">
             keywords = <"progress", "note", "encounter">
         >
-        ["nb"] = <
-            language = <[ISO_639-1::nb]>
-            purpose = <"*Record of encounter as a progress note. (en)">
-            use = <"Test">
-            misuse = <"test">
-            keywords = <"progress", "note", "encounter">
-        >
     >
 
 definition
@@ -58,6 +46,7 @@ definition
         }
         content matches {
             use_archetype EVALUATION[id0.3, openEHR-EHR-EVALUATION.ovl-testtemplate-plain_note-001.v1.0.0]
+            use_archetype EVALUATION[id0.4, openEHR-EHR-EVALUATION.ovl-testtemplate-plain_note-002.v1.0.0]
         }
     }
 
@@ -197,6 +186,32 @@ terminology
             ["ac0.1"] = <
                 text = <"ValueSetForNote (en)">
                 description = <"Test (en)">
+            >
+        >
+    >
+
+------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-EVALUATION.ovl-testtemplate-plain_note-002.v1.0.0
+
+specialize
+    openEHR-EHR-EVALUATION.plain_note.v1.0.0
+
+definition
+    EVALUATION[id1.1] 
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Very simple note">
+                description = <"Simple note with resources">
+            >
+        >
+        ["sl"] = <
+            ["id1.1"] = <
+                text = <"*Plain note(en)">
+                description = <"*Simple note with resources(en)">
             >
         >
     >
