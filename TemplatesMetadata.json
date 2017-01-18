@@ -10,6 +10,12 @@
     "rmType" : "COMPOSITION",
     "name" : "Encounter",
     "path" : "templates/openEHR-EHR-COMPOSITION.testtemplate.v1.adlt",
-    "sha" : "9612b1d47fdd201ef769c6fa1436d321de0a6a62"
+    "sha" : "532fdb09974b9004b0a039f0dc7c1f8eba83fa52"
+  }, {
+    "id" : "openEHR-EHR-COMPOSITION.testtemplatebasedonencounter.v1.0.0",
+    "rmType" : "COMPOSITION",
+    "name" : "Encounter",
+    "path" : "templates/openEHR-EHR-COMPOSITION.testtemplatebasedonencounter.v1.adlt",
+    "sha" : "9965137f4b6856f9d6f2eb95a06e2fbead9ff27b"
   } ]
 }
